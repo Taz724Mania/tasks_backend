@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+class Tasks(models.Model):
+    title=models.CharField(max_length=20)
+    details=models.TextField(default="")
+    dueDateTime=models.DateTimeField(blank=True, null=True)
+    completed=models.BooleanField(default=False)
+
